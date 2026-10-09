@@ -2,7 +2,17 @@
 
 A starter Django REST Framework project with a CRUD API for tasks. It uses SQLite for local development and runs at `http://localhost:8000`.
 
-## Run locally
+## Run with Docker
+
+Install and start Docker Desktop, then run these commands from the project folder:
+
+```powershell
+docker compose up --build
+```
+
+Open `http://localhost:8000/api/tasks/`. The SQLite database is stored in a named Docker volume and remains available when the container is recreated. Stop the server with `Ctrl+C`; start it again with `docker compose up`.
+
+## Run locally without Docker
 
 ```powershell
 cd learn
